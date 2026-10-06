@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExportZonePluginDialogBase</class>
+ <widget class="QDialog" name="ExportZonePluginDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>680</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Export SIG par zone d'étude</string>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>520</width>
+    <height>520</height>
+   </size>
+  </property>
+
+  <layout class="QVBoxLayout" name="main_layout">
+
+   <item>
+    <widget class="QGroupBox" name="group_zone_etude">
+     <property name="title">
+      <string>Zone d'étude</string>
+     </property>
+
+     <layout class="QVBoxLayout" name="layout_zone_etude">
+
+      <item>
+       <layout class="QHBoxLayout" name="layout_mode_zone">
+        <item>
+         <widget class="QRadioButton" name="radio_dessiner">
+          <property name="text">
+           <string>Dessiner</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QRadioButton" name="radio_site_cen">
+          <property name="text">
+           <string>Site CEN</string>
+          </property>
+         </widget>
+        </item>
+
+        <item>
+         <spacer name="spacer_mode_zone">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+
+      <item>
+       <widget class="QPushButton" name="btn_activer_dessin">
+        <property name="text">
+         <string>Activer dessin</string>
+        </property>
+       </widget>
+      </item>
+
+
+      <item>
+       <widget class="QLabel" name="lbl_site_cen_selectionne">
+        <property name="text">
+         <string>Site sélectionné : aucun</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+
+      <item>
+       <widget class="QLabel" name="lbl_zone_status">
+        <property name="text">
+         <string>Zone : aucune</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QGroupBox" name="group_couches">
+     <property name="title">
+      <string>Couches</string>
+     </property>
+
+     <layout class="QVBoxLayout" name="layout_couches">
+
+      <item>
+       <layout class="QHBoxLayout" name="layout_couches_header">
+
+        <item>
+         <widget class="QLabel" name="lbl_couches_visibles">
+          <property name="text">
+           <string>Couches visibles : 0</string>
+          </property>
+         </widget>
+        </item>
+
+        <item>
+         <spacer name="spacer_couches_header">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+
+        <item>
+         <widget class="QPushButton" name="btn_actualiser_couches">
+          <property name="text">
+           <string>Actualiser</string>
+          </property>
+         </widget>
+        </item>
+
+       </layout>
+      </item>
+
+      <item>
+       <widget class="QListWidget" name="list_couches">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+
+      <item>
+        <layout class="QHBoxLayout" name="layout_selection_couches">
+        <item>
+        <widget class="QPushButton" name="btn_tout_selectionner_couches">
+            <property name="text">
+            <string>Tout sélectionner</string>
+            </property>
+        </widget>
+        </item>
+        <item>
+        <widget class="QPushButton" name="btn_tout_deselectionner_couches">
+            <property name="text">
+            <string>Tout désélectionner</string>
+            </property>
+        </widget>
+        </item>
+        </layout>
+    </item>
+
+
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QGroupBox" name="group_sortie">
+     <property name="title">
+      <string>Sortie</string>
+     </property>
+
+     <layout class="QGridLayout" name="layout_sortie">
+
+      <item row="0" column="0">
+       <widget class="QLabel" name="lbl_dossier_sortie">
+        <property name="text">
+         <string>Dossier :</string>
+        </property>
+       </widget>
+      </item>
+
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="line_dossier_sortie">
+        <property name="placeholderText">
+         <string>Dossier de sortie...</string>
+        </property>
+       </widget>
+      </item>
+
+      <item row="0" column="2">
+       <widget class="QPushButton" name="btn_parcourir_sortie">
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+
+      <item row="1" column="0">
+       <widget class="QLabel" name="lbl_suffixe">
+        <property name="text">
+         <string>Suffixe :</string>
+        </property>
+       </widget>
+      </item>
+
+      <item row="1" column="1" colspan="2">
+       <widget class="QLineEdit" name="line_suffixe">
+        <property name="text">
+         <string>export</string>
+        </property>
+       </widget>
+      </item>
+
+      <item row="2" column="0">
+       <widget class="QLabel" name="lbl_fichier_label">
+        <property name="text">
+         <string>Fichier :</string>
+        </property>
+       </widget>
+      </item>
+
+      <item row="2" column="1" colspan="2">
+       <widget class="QLabel" name="lbl_fichier_sortie">
+        <property name="text">
+         <string>YYYYMMDD_SIG_export.gpkg</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QGroupBox" name="group_options">
+     <property name="title">
+      <string>Options</string>
+     </property>
+
+     <layout class="QGridLayout" name="layout_options">
+
+      <item row="0" column="0">
+       <widget class="QLabel" name="lbl_resolution_wms">
+        <property name="text">
+         <string>Résolution WMS :</string>
+        </property>
+       </widget>
+      </item>
+
+      <item row="0" column="1" colspan="3">
+       <widget class="QComboBox" name="combo_resolution_wms">
+        <item>
+         <property name="text">
+          <string>0.5 m - haute résolution</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1 m - standard</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2 m - rapide</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5 m - très rapide</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+
+
+      <item row="2" column="0" colspan="4">
+       <widget class="QCheckBox" name="check_pyramides_raster">
+        <property name="text">
+         <string>Pyramides raster</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QPushButton" name="btn_lancer_decoupage">
+     <property name="text">
+      <string>Lancer le découpage</string>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>34</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QProgressBar" name="progress_bar">
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+
+
+   <item>
+    <layout class="QHBoxLayout" name="layout_footer">
+     <item>
+      <spacer name="spacer_footer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="btn_fermer">
+       <property name="text">
+        <string>Fermer</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+
+ <resources/>
+
+ <connections>
+  <connection>
+   <sender>btn_fermer</sender>
+   <signal>clicked()</signal>
+   <receiver>ExportZonePluginDialogBase</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="source_label">
+     <x>620</x>
+     <y>730</y>
+    </hint>
+    <hint type="destination_label">
+     <x>340</x>
+     <y>380</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+
+</ui>

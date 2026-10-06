@@ -1,0 +1,49 @@
+# Metadata for QGIS plugin
+
+[general]
+name=Export SIG Zone Etude
+description=Découpage des couches QGIS selon une zone d'étude dessinée ou issue de la BDD CEN
+version=0.1
+author=LAKRIOUCH IKRAM
+email=lakriouchikram@gmail.com
+
+about=Découpage des couches QGIS selon une zone d'étude dessinée ou issue de la BDD CEN.
+
+# Compatibilité minimale annoncée.
+# Le plugin est développé pour QGIS 3.28+ avec préparation QGIS 4.x.
+qgisMinimumVersion=3.28
+
+# Ne mettre qgisMaximumVersion=4.99 que lorsque le plugin aura été testé sous QGIS 4.
+qgisMaximumVersion=4.99
+
+# Le plugin ne fournit pas de Processing Provider dédié.
+hasProcessingProvider=no
+
+# Tags séparés par des virgules.
+tags=export, clip, decoupage, zone etude, geopackage, raster, vector, cen
+
+# Catégorie principale dans le gestionnaire d'extensions QGIS.
+category=Vector
+
+# Icône du plugin.
+icon=icon.png
+
+# Plugin en développement mais utilisable.
+experimental=False
+
+# Plugin non déprécié.
+deprecated=False
+
+# Le plugin ne fonctionne pas côté QGIS Server.
+server=False
+
+# Liens optionnels.
+# homepage=
+# tracker=
+# repository=
+
+# Dépendances optionnelles entre plugins QGIS.
+# plugin_dependencies=
+
+# Changelog optionnel.
+# changelog=

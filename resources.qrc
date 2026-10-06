@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/export_sig_zone_etude" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
